@@ -14,6 +14,8 @@
     body {
       margin: 0;
       padding: 32px 18px;
+      overflow-x: hidden;
+      position: relative;
     }
     main {
       max-width: 820px;
@@ -22,6 +24,8 @@
       border: 1px solid rgba(37, 33, 26, 0.16);
       border-radius: 8px;
       padding: 28px;
+      position: relative;
+      z-index: 1;
     }
     h1, h2 {
       line-height: 1.2;
@@ -32,9 +36,108 @@
     .muted {
       opacity: 0.78;
     }
+    .mosquito-defs {
+      display: none;
+    }
+    .decorations {
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      position: fixed;
+      z-index: 0;
+    }
+    .mosquito {
+      color: #25211a;
+      height: 44px;
+      opacity: 0.15;
+      position: absolute;
+      width: 44px;
+    }
+    .mosquito-one {
+      left: 22px;
+      top: 28px;
+      transform: rotate(-18deg);
+    }
+    .mosquito-two {
+      right: 28px;
+      top: 72px;
+      transform: rotate(22deg);
+    }
+    .mosquito-three {
+      bottom: 58px;
+      left: 28px;
+      transform: rotate(28deg);
+    }
+    .mosquito-four {
+      bottom: 28px;
+      right: 34px;
+      transform: rotate(-24deg);
+    }
+    .mosquito-five {
+      left: 5vw;
+      top: 46vh;
+      transform: rotate(8deg);
+    }
+    .mosquito-six {
+      right: 5vw;
+      top: 58vh;
+      transform: rotate(-10deg);
+    }
+    @media (max-width: 720px) {
+      body {
+        padding: 22px 12px;
+      }
+      main {
+        padding: 22px;
+      }
+      .mosquito {
+        height: 32px;
+        opacity: 0.11;
+        width: 32px;
+      }
+      .mosquito-five,
+      .mosquito-six {
+        display: none;
+      }
+      .mosquito-one {
+        left: 8px;
+        top: 8px;
+      }
+      .mosquito-two {
+        right: 8px;
+        top: 18px;
+      }
+      .mosquito-three {
+        bottom: 18px;
+        left: 10px;
+      }
+      .mosquito-four {
+        bottom: 10px;
+        right: 10px;
+      }
+    }
   </style>
 </head>
 <body>
+  <svg class="mosquito-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="mosquito-mark" viewBox="0 0 64 64">
+        <path d="M32 16c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5Z" fill="currentColor"/>
+        <path d="M25 28c0-5 14-5 14 0v17c0 8-14 8-14 0V28Z" fill="currentColor"/>
+        <path d="M25 30c-8-6-17-5-21 2 8 4 16 4 23 0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+        <path d="M39 30c8-6 17-5 21 2-8 4-16 4-23 0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+        <path d="M27 38 10 30M37 38l17-8M27 45 12 55M37 45l15 10M32 16 24 6M32 16l8-10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"/>
+      </symbol>
+    </defs>
+  </svg>
+  <div class="decorations" aria-hidden="true">
+    <svg class="mosquito mosquito-one" aria-hidden="true" focusable="false"><use href="#mosquito-mark"></use></svg>
+    <svg class="mosquito mosquito-two" aria-hidden="true" focusable="false"><use href="#mosquito-mark"></use></svg>
+    <svg class="mosquito mosquito-three" aria-hidden="true" focusable="false"><use href="#mosquito-mark"></use></svg>
+    <svg class="mosquito mosquito-four" aria-hidden="true" focusable="false"><use href="#mosquito-mark"></use></svg>
+    <svg class="mosquito mosquito-five" aria-hidden="true" focusable="false"><use href="#mosquito-mark"></use></svg>
+    <svg class="mosquito mosquito-six" aria-hidden="true" focusable="false"><use href="#mosquito-mark"></use></svg>
+  </div>
   <main>
     <h1>MOZKITO Privacy Policy</h1>
     <p class="muted">Last updated: 2026-07-09</p>
@@ -71,29 +174,29 @@
 
     <hr>
 
-    <h2>EspaÃ±ol</h2>
-    <p>MOZKITO es una app de entretenimiento para moviles Android y relojes Wear OS. Muestra una pantalla con tematica de mosquito y puede reproducir un tono agudo generado localmente cuando el usuario lo activa.</p>
+    <h2>Español</h2>
+    <p>MOZKITO es una app de entretenimiento para móviles Android y relojes Wear OS. Muestra una pantalla con temática de mosquito y puede reproducir un tono agudo generado localmente cuando el usuario lo activa.</p>
 
-    <h3>Recopilacion de datos</h3>
+    <h3>Recopilación de datos</h3>
     <p>MOZKITO no recopila datos personales.</p>
-    <p>La app no recopila, almacena, vende, comparte ni transmite datos personales, ubicacion, contactos, fotos, archivos, audio del microfono, datos de camara, datos de salud, analitica de uso, identificadores publicitarios ni identificadores de dispositivo para publicidad.</p>
+    <p>La app no recopila, almacena, vende, comparte ni transmite datos personales, ubicación, contactos, fotos, archivos, audio del micrófono, datos de cámara, datos de salud, analítica de uso, identificadores publicitarios ni identificadores de dispositivo para publicidad.</p>
 
-    <h3>Comparticion de datos</h3>
+    <h3>Compartición de datos</h3>
     <p>MOZKITO no comparte datos de usuario con terceros.</p>
 
-    <h3>Anuncios, analitica, cuentas y red</h3>
+    <h3>Anuncios, analítica, cuentas y red</h3>
     <ul>
       <li>Sin anuncios.</li>
-      <li>Sin analitica.</li>
+      <li>Sin analítica.</li>
       <li>Sin SDK de reporte de fallos.</li>
       <li>Sin sistema de cuentas.</li>
-      <li>Sin inicio de sesion.</li>
+      <li>Sin inicio de sesión.</li>
       <li>Sin llamadas de red.</li>
       <li>Sin permiso Android INTERNET.</li>
     </ul>
 
     <h3>Audio</h3>
-    <p>Cuando se activa, MOZKITO genera un tono localmente en el dispositivo usando APIs nativas de audio de Android. La app no graba audio y no usa el microfono.</p>
+    <p>Cuando se activa, MOZKITO genera un tono localmente en el dispositivo usando APIs nativas de audio de Android. La app no graba audio y no usa el micrófono.</p>
 
     <h3>Aviso de entretenimiento</h3>
     <p>MOZKITO es una app de entretenimiento. No garantiza repeler mosquitos y no sustituye repelentes, mosquiteras ni recomendaciones sanitarias.</p>
